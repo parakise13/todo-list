@@ -1,0 +1,22 @@
+@import './Constant.scss';
+
+@font-face {
+  font-family: 'HSYuji-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  font-family: 'HSYuji-Regular';
+  box-sizing: border-box;
+  color: $light-gray;
+}
+
+.App {
+  text-align: center;
+  background-color: #353839;
+  font-size: $font-size;
+  overflow: hidden;
+}
+

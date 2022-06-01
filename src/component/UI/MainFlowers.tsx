@@ -1,6 +1,5 @@
 import { gsap } from "gsap";
-import { Fragment, useEffect, useRef } from "react";
-// import { MotionPathHelper } from "gsap/MotionPathHelper";
+import { useEffect, useRef } from "react";
 import { ReactComponent as Svg1 } from "../../assets/svg1.svg";
 import { ReactComponent as Svg2 } from "../../assets/svg2.svg";
 import { ReactComponent as Svg3 } from "../../assets/svg3.svg";
@@ -10,7 +9,6 @@ import { ReactComponent as Svg6 } from "../../assets/svg6.svg";
 import { ReactComponent as Svg7 } from "../../assets/svg7.svg";
 import { ReactComponent as Svg8 } from "../../assets/svg8.svg";
 import { ReactComponent as Svg9 } from "../../assets/svg9.svg";
-// gsap.registerPlugin(MotionPathHelper);
 import classes from "./MainFlowers.module.scss";
 
 const MainFlowers = () => {

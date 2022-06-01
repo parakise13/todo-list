@@ -30,6 +30,9 @@
 			background-color: transparent;
 			font-size: $font-size;
 			font-size: $menu-font-size;
+			&:hover{
+				cursor: pointer;
+			}
 		}
 	}
 }

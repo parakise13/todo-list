@@ -27,7 +27,6 @@ function App() {
             <Route path='/important-todo' exact>
               <ImportantTodos />
             </Route>
-
           </Switch>
         </main>
       </Card>

@@ -1,14 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import logoImg from "../../assets/logo.png";
 import classes from "./Header.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { loggedIn, loggedOut, modalOpen, modalClose } from "../store/login-store";
+import { loggedOut, modalOpen } from "../store/login-store";
 import { RootState } from "../store/store";
 import { Fragment } from "react";
 import LoginModal from "./LoginModal";
+import { removeUserName } from "../store/addUser-store";
 
 const Header = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const isAuthenticated = useSelector(
     (state: RootState) => state.login.isAuthenticated
   );
@@ -20,7 +22,12 @@ const Header = () => {
     dispatch(modalOpen());
   };
 
+  const handleLogout = () => {
+    dispatch(loggedOut());
+    dispatch(removeUserName());
 
+    history.push("/");
+  };
 
   return (
     <Fragment>
@@ -55,12 +62,7 @@ const Header = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink activeClassName={classes.active} to="/important-todo">
-                  IMPORTANT TODO
-                </NavLink>
-              </li>
-              <li>
-                <button /*onClick={handleCloseModal}*/>LOG OUT</button>
+                <button onClick={handleLogout}>LOG OUT</button>
               </li>
             </Fragment>
           ) : (

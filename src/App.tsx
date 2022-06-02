@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import "./App.scss";
 import Header from "./component/Layout/Header";
 import Main from "./component/Layout/Main";
+import { loggedIn, loggedOut } from "./component/store/login-store";
+import { RootState } from "./component/store/store";
 import ImportantTodos from "./component/Todo/ImpotantTodos";
 import NewTodo from "./component/Todo/NewTodo";
 import TodoList from "./component/Todo/TodoList";
 import Card from "./component/UI/Card";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const userName = localStorage.getItem("userName");
+    if (userName) {
+      dispatch(loggedIn());
+    } else {
+      dispatch(loggedOut());
+    }
+  }, [])
+
   return (
     <div className="App">
       <Header />

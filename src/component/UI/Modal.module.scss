@@ -1,0 +1,64 @@
+@import '../../Constant.scss';
+
+.Backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+	transform: translate(-50%, -50% );
+  width: 30%;
+  background-color: $light-purple;
+	
+
+  padding: $padding;
+  border-radius: $borderRadius;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+	form{
+		font-size: $menu-font-size;
+		text-align: center;
+		label{
+			color: $black;
+			display: block;
+		}
+		input{
+			border: 1px solid $purple;
+			// height: $inputHeight;
+			border-radius: calc(#{$borderRadius} - 8px);
+			margin: 10px auto;
+			display: block;
+			width: 80%;
+			color: $black;
+			font-size: $font-size;
+			padding: calc(#{$padding} - 15px) $padding;
+		}
+		button{
+			background-color: $light-purple;
+			color: $black;
+			font-size: $small-font-size;
+			// height: $inputHeight;
+			border: 1px solid $dark-gray;
+			border-radius: calc(#{$borderRadius} - 8px);
+			padding: calc(#{$padding} - 15px) $padding;
+			transition: 0.5s ease-in-out;
+			
+			&:not(:last-of-type){
+				margin-right: $padding;
+			}
+
+			&:hover {
+				background-color: $purple;
+			}
+		}
+	}
+}

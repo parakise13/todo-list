@@ -11,6 +11,8 @@
   font-family: 'HSYuji-Regular';
   box-sizing: border-box;
   color: $light-gray;
+  padding:0;
+  margin:0;
 }
 
 body {
@@ -22,5 +24,6 @@ body {
   background-color: #353839;
   font-size: $font-size;
   overflow: hidden;
+  height: 100%;
 }
 

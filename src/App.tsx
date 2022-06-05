@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import "./App.scss";
 import Header from "./component/Layout/Header";
 import Main from "./component/Layout/Main";
 import { loggedIn, loggedOut } from "./component/store/login-store";
-import { RootState } from "./component/store/store";
 import ImportantTodos from "./component/Todo/ImpotantTodos";
 import NewTodo from "./component/Todo/NewTodo";
+import TodoDetail from "./component/Todo/TodoDetail";
 import TodoList from "./component/Todo/TodoList";
 import Card from "./component/UI/Card";
 
@@ -33,6 +33,9 @@ function App() {
             </Route>
             <Route path='/todo-list' exact>
               <TodoList />
+            </Route>
+            <Route path='/todo-list/:id' exact>
+              <TodoDetail />
             </Route>
             <Route path='/new-todo' exact>
               <NewTodo />

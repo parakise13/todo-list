@@ -1,0 +1,51 @@
+@import "../../Constant.scss";
+
+.todo-detail {
+		font-size: $sub-font-size;
+    background-color: $dark-gray;
+		// height: 80%;
+    width: 70%;
+    margin: 0 auto;
+    padding: calc(#{$padding} * 2);
+    border-radius: $borderRadius;
+    position: relative;
+    
+    div, p{
+      color: $black;
+      background-color: $light-gray;
+      padding: $padding;
+      border-radius: $borderRadius;
+    }
+
+    .title {
+      margin-bottom: $padding;
+      width: max-content;
+    }
+
+    .description{
+      >p:first-child{
+        padding-bottom: 0;
+      }
+    }
+
+    button {
+      border-radius: $borderRadius;
+      font-size: $menu-font-size;
+      color: black;
+      padding: calc(#{$padding} - 10px) $padding;
+      border: 1px solid $black;
+      background-color: $light-gray;
+      transition: 0.5s ease;
+      height: 50px;
+
+      position: absolute;
+      top: $padding;
+      right: $padding;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $dark-gray;
+        color: #fff;
+      }
+  }
+}

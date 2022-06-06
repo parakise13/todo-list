@@ -1,13 +1,8 @@
 @import "../../Constant.scss";
 
 .new-todo {
-  height: calc(100vh - #{$header-height} - (#{$padding * 2}));
-  text-align: left;
   width: 70%;
   margin: 0 auto;
-  display: flex;
-  justify-self: start;
-  align-items: center;
 
   form {
     font-size: $sub-font-size;

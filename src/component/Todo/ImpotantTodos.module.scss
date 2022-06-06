@@ -1,0 +1,32 @@
+@import "../../Constant.scss";
+
+.important-todos{
+	font-size: $sub-font-size;
+	background-color: $dark-gray;
+	width: 70%;
+	margin: 0 auto;
+	padding: calc(#{$padding} * 2);
+	border-radius: $borderRadius;
+	position: relative;
+	list-style: none;
+
+	li{
+		color: $black;
+		background-color: $light-gray;
+		padding: $padding;
+		border-radius: $borderRadius;
+
+		&.empty-list {
+			width: 90%;
+			height: auto;
+			font-size: $sub-title-font-size;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			line-height: 2;
+			padding: calc(#{$padding} * 5);
+		}
+	}
+
+
+}

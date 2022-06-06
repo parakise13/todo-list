@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.0.4",
     "@types/react-redux": "^7.1.24",
     "gsap": "^3.10.4",
+    "jquery": "^3.6.0",
     "node-sass": "^7.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -51,6 +52,7 @@
   },
   "devDependencies": {
     "@types/gsap": "^3.0.0",
+    "@types/jquery": "^3.5.14",
     "@types/react-router-dom": "^5.3.3"
   }
 }

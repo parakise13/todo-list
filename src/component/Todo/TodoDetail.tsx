@@ -1,21 +1,33 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { RootState } from "../store/store";
+import classes from "./TodoDetail.module.scss";
 
 interface paramsProps {
-	id: string
+  id: string;
 }
 
-const TodoDetail = () => { 
-	const params = useParams<paramsProps>();
-	const todoId = useSelector((state: RootState) => state.toDos.find(todo => todo.id === parseInt(params.id)));
+const TodoDetail = () => {
+  const params = useParams<paramsProps>();
+  const history = useHistory();
+  const todo = useSelector((state: RootState) =>
+    state.toDos.find((todo) => todo.id === parseInt(params.id))
+  );
 
-	// useEffect(() => {
-	// 	console.log(todo);
-	// }, [todoId])
+	const handleClickGoback = () => {
+		history.goBack();
+	}
 
-	return <p>{ todoId?.id }</p>
-}
+  return (
+    <div className={classes["todo-detail"]}>
+      <button className={classes.goback} onClick={handleClickGoback}>뒤로가기</button>
+      <div className={classes.title}>TITLE : {todo?.title}</div>
+      <div className={classes.description}>
+        <p>DESCRIPTION</p>
+        <p>{todo?.description}</p>
+      </div>
+    </div>
+  );
+};
 
 export default TodoDetail;

@@ -1,28 +1,14 @@
-import { Fragment, useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { RootState } from "../store/store";
-import { removeTodo, toDoProps } from "../store/todo-store";
+
+import { Fragment, useState } from "react";
+import { toDoProps } from "../store/todo-store";
 import classes from "./TodoList.module.scss";
-import { AiOutlineStar, AiFillStar } from 'react-icons/ai';
+import List from "../Layout/List";
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
 
 const TodoList = () => {
-  const dispatch = useDispatch();
-  const [toDoList, setToDoList] = useState<toDoProps[]>([]);
-  // let toDoList: toDoProps[] = [];
-  // const toDoInfo = useSelector((state: RootState) => state.toDos);
-
-  const handleDeleteTodo = (todo: toDoProps) => {
-    dispatch(removeTodo(todo));
-  };
-
-  useEffect(() => {
-    setToDoList(JSON.parse(localStorage.getItem("todos") || "[]"));
-  }, [setToDoList]);
-
-  useEffect(() => {
-    console.log(typeof toDoList + toDoList.length + ' = toDoInfo')
-  }, [])
+  // const [toDoList, setToDoList] = useState<toDoProps[]>([]);
+  const toDoList = useSelector((state: RootState) => state.toDos)
 
   return (
     <ul className={classes["todo-list"]}>
@@ -35,15 +21,7 @@ const TodoList = () => {
         <Fragment>
           {toDoList.map((todo) => {
             return (
-              <li className={classes.todo} key={todo.id}>
-                <Link to={`/todo-list/${todo.id}`}>
-                  <div className={classes["todo-box"]}><p>TITLE: </p><p>{todo.title}</p></div>
-                  {/* <div><p>DECRIPTION: </p><p>{todo.description}</p></div> */}
-                </Link>
-                <button className={classes.star}><AiOutlineStar /></button>
-                {/* <button className={classes.star}><AiFillStar /></button> */}
-                <button className={classes["close-btn"]} onClick={() => handleDeleteTodo(todo)}>삭제</button>
-              </li>
+              <List todos={todo} key={todo.id} />
             );
           })}
         </Fragment>

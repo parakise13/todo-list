@@ -57,11 +57,6 @@ const Header = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink activeClassName={classes.active} to="/new-todo">
-                  ADD NEW TODO
-                </NavLink>
-              </li>
-              <li>
                 <button onClick={handleLogout}>LOG OUT</button>
               </li>
             </Fragment>

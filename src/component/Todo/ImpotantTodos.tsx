@@ -20,6 +20,7 @@ const ImportantTodos = () => {
 
   return (
     <ul className={classes["important-todos"]}>
+      <h2>IMPORTANT TODO LIST</h2>
       {importantTodos.length === 0 ? (
         <li className={classes["empty-list"]}>
           중요한 List가 존재하지 않습니다. <br />  ToDo List에서 별모양 버튼을 클릭하여 <br />  Important ToDo를 추가해보세요!

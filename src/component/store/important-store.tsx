@@ -13,10 +13,17 @@ const importantTodoSlice = createSlice({
 			// console.log(state + ' = state')
 		},
 		removeImportant: (state: toDoProps[], action) => state.filter((toDo) => toDo.id !== action.payload),
+		editImportantTodo: (state: toDoProps[], action) => {
+      let foundTodo = state.find((toDo) => toDo.id === action.payload.id);
+      if (foundTodo) {
+        foundTodo.title = action.payload.title;
+        foundTodo.description = action.payload.description;
+      }
+    }
 	}
 }
 );
 
-export const { addImportant, removeImportant } = importantTodoSlice.actions;
+export const { addImportant, removeImportant, editImportantTodo } = importantTodoSlice.actions;
 
 export default importantTodoSlice;

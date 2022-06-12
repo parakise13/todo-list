@@ -29,6 +29,7 @@ const NewTodo = () => {
 
   return (
     <div className={classes["new-todo"]}>
+      <h2>ADD NEW TODO</h2>
       <form>
         <div className={classes["title-input"]}>
           <label htmlFor="title">TITLE : </label>

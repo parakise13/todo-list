@@ -1,9 +1,11 @@
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { RootState } from "../store/store";
+import { toDoProps } from "../store/todo-store";
 import classes from "./TodoDetail.module.scss";
 
-interface paramsProps {
+export interface paramsProps {
   id: string;
 }
 
@@ -14,13 +16,27 @@ const TodoDetail = () => {
     state.toDos.find((todo) => todo.id === parseInt(params.id))
   );
 
+  useEffect(() => {
+    if (todo === undefined) {
+      history.push("/todo-list");
+    }
+  }, [todo, history])
+
 	const handleClickGoback = () => {
-		history.goBack();
-	}
+		history.push("/todo-list");
+  }
+  
+  const handleClickEdit = (todo: toDoProps | undefined) => {
+    history.push(`/edit-todo/${todo?.id}`)
+  }
 
   return (
     <div className={classes["todo-detail"]}>
-      <button className={classes.goback} onClick={handleClickGoback}>뒤로가기</button>
+      <h2>TODO DETAIL</h2>
+      <div  className={classes.btn}>
+        <button className={classes.edit} onClick={()=>handleClickEdit(todo)}>수정하기</button>
+        <button className={classes.goback} onClick={handleClickGoback}>뒤로가기</button>
+      </div>
       <div className={classes.title}>TITLE : {todo?.title}</div>
       <div className={classes.description}>
         <p>DESCRIPTION</p>

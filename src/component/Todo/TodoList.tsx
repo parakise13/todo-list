@@ -12,6 +12,7 @@ const TodoList = () => {
 
   return (
     <ul className={classes["todo-list"]}>
+      <h2>TODO LIST</h2>
       {toDoList.length === 0 ? (
         <li className={classes["empty-list"]}>
           ToDo List가 존재하지 않습니다. <br /> Add New ToDo를 클릭하여 ToDo를

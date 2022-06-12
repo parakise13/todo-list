@@ -29,10 +29,16 @@ const todoSlice = createSlice({
         foundTodo.isImportant = !action.payload.isImportant;
       }
     },
+    editTodo: (state: toDoProps[], action) => {
+      let foundTodo = state.find((toDo) => toDo.id === action.payload.id);
+      if (foundTodo) {
+        foundTodo.title = action.payload.title;
+        foundTodo.description = action.payload.description;
+      }
+    }
   },
 });
 
-export const { addTodo, removeTodo, isImportant } = todoSlice.actions;
+export const { addTodo, removeTodo, isImportant, editTodo } = todoSlice.actions;
 
 export default todoSlice;
-// return toDo.isImportant = action.payload.isImportant

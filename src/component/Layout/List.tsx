@@ -10,6 +10,7 @@ const List: React.FC<{ todos: toDoProps }> = (props) => {
 
   const handleDeleteTodo = (todo: toDoProps) => {
     dispatch(removeTodo(todo.id));
+    dispatch(removeImportant(todo.id));
   };
 
   const handleClickImportant = (todo: toDoProps) => {

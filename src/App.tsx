@@ -5,6 +5,7 @@ import "./App.scss";
 import Header from "./component/Layout/Header";
 import Main from "./component/Layout/Main";
 import { loggedIn, loggedOut } from "./component/store/login-store";
+import EditTodo from "./component/Todo/EditTodo";
 import ImportantTodos from "./component/Todo/ImpotantTodos";
 import NewTodo from "./component/Todo/NewTodo";
 import TodoDetail from "./component/Todo/TodoDetail";
@@ -42,6 +43,9 @@ function App() {
             </Route>
             <Route path='/important-todo' exact>
               <ImportantTodos />
+            </Route>
+            <Route path='/edit-todo/:id' exact>
+              <EditTodo />
             </Route>
           </Switch>
         </main>

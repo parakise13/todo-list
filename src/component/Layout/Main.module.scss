@@ -14,11 +14,16 @@
 
 		.title{
 			font-size: $title-font-size;
-			height: 100%;
+			margin: calc(#{$padding} * 6) 0 calc(#{$padding} * 3);
+			height: auto;
 		}
 
 		.content {
 			font-size: $menu-font-size;
+
+			&:not(:last-child){
+				margin-bottom: calc(#{$padding});
+			}
 		}
 	}
 

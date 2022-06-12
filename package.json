@@ -58,5 +58,5 @@
     "@types/jquery": "^3.5.14",
     "@types/react-router-dom": "^5.3.3"
   },
-  "homepage": "https://parakise13.github.io/todo-list"
+  "homepage": "https://parakise13.github.io/todo-project"
 }

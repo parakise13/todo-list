@@ -26,14 +26,14 @@ const Header = () => {
     dispatch(loggedOut());
     dispatch(removeUserName());
 
-    history.push("/");
+    history.push("/todo-list");
   };
 
   return (
     <Fragment>
       {modalOpened && <LoginModal />}
       <header className={classes.header}>
-        <NavLink activeClassName={classes.active} to="/">
+        <NavLink activeClassName={classes.active} to="/todo-project">
           <div className={classes["logo-wrapper"]}>
             <img src={logoImg} alt="logo" />
           </div>
@@ -42,17 +42,17 @@ const Header = () => {
           {isAuthenticated ? (
             <Fragment>
               <li>
-                <NavLink activeClassName={classes.active} to="/todo-list">
+                <NavLink activeClassName={classes.active} to="/todo-project/todo-list">
                   TODO LIST
                 </NavLink>
               </li>
               <li>
-                <NavLink activeClassName={classes.active} to="/new-todo">
+                <NavLink activeClassName={classes.active} to="/todo-project/new-todo">
                   ADD NEW TODO
                 </NavLink>
               </li>
               <li>
-                <NavLink activeClassName={classes.active} to="/important-todo">
+                <NavLink activeClassName={classes.active} to="/todo-project/important-todo">
                   IMPORTANT TODO
                 </NavLink>
               </li>

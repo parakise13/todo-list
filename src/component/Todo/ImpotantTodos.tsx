@@ -30,13 +30,10 @@ const ImportantTodos = () => {
           {importantTodos.map((todo) => {
             return (
               <li key={todo.id} className={classes.todo}>
-                <Link to={`/todo-list/${todo.id}`}>
+                <Link to={`/todo-project/todo-list/${todo.id}`}>
                   <div className={classes["todo-box"]}>
                     <p>TITLE: </p>
                     <p>{todo.title}</p>
-                    {/* <div className={classes["desc-box"]}>
-											<p>{todo.description}</p>
-										</div> */}
                   </div>
                 </Link>
                 <button

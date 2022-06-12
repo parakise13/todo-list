@@ -27,7 +27,7 @@ const List: React.FC<{ todos: toDoProps }> = (props) => {
 
   return (
     <li className={classes.todo}>
-      <Link to={`/todo-list/${props.todos.id}`}>
+      <Link to={`/todo-project/todo-list/${props.todos.id}`}>
         <div className={classes["todo-box"]}>
           <p>TITLE: </p>
           <p>{props.todos.title}</p>

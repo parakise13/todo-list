@@ -26,7 +26,7 @@ const Header = () => {
     dispatch(loggedOut());
     dispatch(removeUserName());
 
-    history.push("/todo-project/todo-list");
+    history.push("/todo-project");
   };
 
   return (

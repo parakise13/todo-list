@@ -18,16 +18,16 @@ const TodoDetail = () => {
 
   useEffect(() => {
     if (todo === undefined) {
-      history.push("/todo-list");
+      history.push("/todo-project/todo-list");
     }
   }, [todo, history])
 
 	const handleClickGoback = () => {
-		history.push("/todo-list");
+		history.push("/todo-project/todo-list");
   }
   
   const handleClickEdit = (todo: toDoProps | undefined) => {
-    history.push(`/edit-todo/${todo?.id}`)
+    history.push(`/todo-project/edit-todo/${todo?.id}`)
   }
 
   return (

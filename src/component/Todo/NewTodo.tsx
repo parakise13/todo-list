@@ -24,7 +24,7 @@ const NewTodo = () => {
         description,
       })
     );
-    history.push("/todo-list");
+    history.push("/todo-project/todo-list");
   };
 
   return (

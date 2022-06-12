@@ -39,7 +39,7 @@ const EditTodo = () => {
         description,
       })
     );
-    history.push(`/todo-list/${parseInt(params.id)}`);
+    history.push(`/todo-project/todo-list/${parseInt(params.id)}`);
   };
 
 	useEffect(() => {

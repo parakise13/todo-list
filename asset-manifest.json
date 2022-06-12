@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/todo-list/static/css/main.1c559b99.css",
+    "main.js": "/todo-list/static/js/main.47496ebd.js",
+    "static/media/svg1.svg": "/todo-list/static/media/svg1.97aea37f51d6140755faabe820e6044f.svg",
+    "static/media/svg2.svg": "/todo-list/static/media/svg2.7104c7075b93bd08d65c5fac276e9a6d.svg",
+    "static/media/svg3.svg": "/todo-list/static/media/svg3.d852ee7b758e6629d303ac61c0c6a75a.svg",
+    "static/media/svg6.svg": "/todo-list/static/media/svg6.c115ea254843b39beaa587ba4bbfa30c.svg",
+    "static/media/svg8.svg": "/todo-list/static/media/svg8.8f05117f735872424b78b5e7d79681cb.svg",
+    "static/media/svg9.svg": "/todo-list/static/media/svg9.369e8dad96055e4ad1da689424a0cee6.svg",
+    "static/media/svg4.svg": "/todo-list/static/media/svg4.08a86bba8d74847e7de4c2158855ff86.svg",
+    "static/media/svg5.svg": "/todo-list/static/media/svg5.4b8d54538d73f6e25792bc365965f394.svg",
+    "static/media/svg7.svg": "/todo-list/static/media/svg7.6c2950302a260d9cda603ae9f0ebf849.svg",
+    "index.html": "/todo-list/index.html",
+    "main.1c559b99.css.map": "/todo-list/static/css/main.1c559b99.css.map",
+    "main.47496ebd.js.map": "/todo-list/static/js/main.47496ebd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c559b99.css",
+    "static/js/main.47496ebd.js"
+  ]
+}

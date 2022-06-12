@@ -29,22 +29,22 @@ function App() {
       <Card>
         <main>
           <Switch>
-            <Route path='/' exact>
+            <Route path='/todo-project' exact>
               <Main />
             </Route>
-            <Route path='/todo-list' exact>
+            <Route path='/todo-project/todo-list' exact>
               <TodoList />
             </Route>
-            <Route path='/todo-list/:id' exact>
+            <Route path='/todo-project/todo-list/:id' exact>
               <TodoDetail />
             </Route>
-            <Route path='/new-todo' exact>
+            <Route path='/todo-project/new-todo' exact>
               <NewTodo />
             </Route>
-            <Route path='/important-todo' exact>
+            <Route path='/todo-project/important-todo' exact>
               <ImportantTodos />
             </Route>
-            <Route path='/edit-todo/:id' exact>
+            <Route path='/todo-project/edit-todo/:id' exact>
               <EditTodo />
             </Route>
           </Switch>

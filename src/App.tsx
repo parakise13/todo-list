@@ -21,7 +21,7 @@ function App() {
     } else {
       dispatch(loggedOut());
     }
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="App">

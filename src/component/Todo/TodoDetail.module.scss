@@ -15,6 +15,10 @@
       background-color: $light-gray;
       padding: $padding;
       border-radius: $borderRadius;
+
+      span{
+        color: $black;
+      }
     }
 
     .title {

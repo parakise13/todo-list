@@ -40,7 +40,14 @@ const TodoDetail = () => {
       <div className={classes.title}>TITLE : {todo?.title}</div>
       <div className={classes.description}>
         <p>DESCRIPTION</p>
-        <p>{todo?.description}</p>
+        <p>{todo?.description.split('\n').map(line => {
+          return (
+            <span>
+              {line}
+              <br />
+            </span>
+          )
+        })}</p>
       </div>
     </div>
   );

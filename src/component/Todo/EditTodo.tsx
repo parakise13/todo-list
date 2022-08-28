@@ -23,8 +23,8 @@ const EditTodo = () => {
   const handleOnChangeDesc = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setDescription(e.target.value);
 	};
-	
-	const handleEdit = () => {
+
+  const handleEdit = () => {
     dispatch(
 			editTodo({
 				id: parseInt(params.id),
@@ -45,7 +45,9 @@ const EditTodo = () => {
 	useEffect(() => {
 		const todo = todos.find((toDo) => toDo.id === parseInt(params.id));
 		if (todo) {
-			setFoundTodo(todo);
+      setFoundTodo(todo);
+      setTitle(todo.title);
+      setDescription(todo.description);
 		}
 	}, [params.id, todos]);
 	
